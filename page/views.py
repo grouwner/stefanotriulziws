@@ -11,8 +11,8 @@ def post_list(request):
     posts = Gallery.objects.filter(published_date__lte=timezone.now()).order_by('my_order')
     return render(request, 'home.html', {'posts': posts})
 
-def post_detail(request, slug):
-    post = get_object_or_404(Gallery, slug=slug)
+def post_detail(request, slug, id):
+    post = get_object_or_404(Gallery, slug=slug, id=id)
     return render(request, 'post_detail.html', {'post': post})
 
 def contact(request):
