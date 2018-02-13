@@ -14,3 +14,6 @@ def post_list(request):
 def post_detail(request, slug):
     post = get_object_or_404(Gallery, slug=slug)
     return render(request, 'post_detail.html', {'post': post})
+
+def contact(request):
+    return render(request, 'contact.html', {})
