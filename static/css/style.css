@@ -28,3 +28,17 @@ body{
 .h1, h1 {
     font-size: 36px;
 }
+.form-control{
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}

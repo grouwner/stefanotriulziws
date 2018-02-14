@@ -8,6 +8,12 @@ body{
 .canvas{
     padding: 60px;
 }
+.navbar {
+    padding-bottom: 60px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .navbar-light .navbar-brand {
     color: rgba(0,0,0,.9);
     font-weight: 900;
@@ -25,6 +31,71 @@ body{
     padding-right: .9rem;
     padding-left: .9rem;
 }
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid rgba(0,0,0,.125);
+    border-radius: 0px;
+}
+.card-img {
+    width: 100%;
+    border-radius: calc(.25rem - 1px);
+    background: #000;
+    opacity: 0.3;
+}
 .h1, h1 {
     font-size: 36px;
+}
+label{
+    margin-bottom: 0px;
+}
+.form-control{
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.form-control:focus {
+    background: #fff;
+    -webkit-transition: background .1s ease-in;
+    -moz-transition: background .1s ease-in;
+    -o-transition: background .1s ease-in;
+    transition: background .1s ease-in;
+    outline: none;
+    box-shadow: 0 0 0 0;
+    border-color: #ccc;
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+    .navbar{
+        padding-bottom: 60px;
+    }
+    .canvas{
+        padding: 0px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
 }
