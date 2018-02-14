@@ -1,6 +1,7 @@
 body{
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Karla', sans-serif;
 }
 .bg-light {
     background-color: #ffffff!important;
@@ -16,9 +17,9 @@ body{
 }
 .navbar-light .navbar-brand {
     color: rgba(0,0,0,.9);
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
-    font-family: 'Karla', sans-serif;
+    font-size: 36px;
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.3);
