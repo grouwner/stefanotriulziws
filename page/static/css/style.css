@@ -139,6 +139,10 @@ label{
     font-weight: 700;
     text-transform: uppercase;
 }
+.view {
+    cursor: pointer;
+    margin-bottom: 25px;
+}
 
 
 

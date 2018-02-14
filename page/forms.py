@@ -15,5 +15,5 @@ class ContactForm(forms.Form):
         self.fields['Name'].widget.attrs.update({'class': 'form-control'})
         self.fields['Email_Address'].widget.attrs.update({'class': 'form-control'})
         self.fields['Subject'].widget.attrs.update({'class': 'form-control'})
-        self.fields['Message'].widget.attrs.update({'class': 'form-control'})
+        self.fields['Message'].widget.attrs.update({'class': 'form-control', 'rows': '4',})
 
