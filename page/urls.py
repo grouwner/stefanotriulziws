@@ -8,6 +8,7 @@ urlpatterns = [
     # url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
     url(r'^gallery/(?P<slug>[\w-]+)/(?P<id>[\w-]+)/$', views.post_detail, name='post_detail'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^about/$', views.about, name='about'),
 ]
 
 if settings.DEBUG is True:
