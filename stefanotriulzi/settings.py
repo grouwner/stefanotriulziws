@@ -130,3 +130,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'media/')
 
 MEDIA_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
+
+DEFAULT_FILE_STORAGE = 'storages.backends.ftp.FTPStorage'
+FTP_STORAGE_LOCATION = 'ftp://user:password@localhost:21'
