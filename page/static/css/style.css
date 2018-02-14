@@ -122,6 +122,12 @@ label{
     background-color: #272727;
     border-color: #272727;
 }
+.badge, .btn, .card:not([class*=card-outline-]), .chip, .jumbotron, .modal-dialog.cascading-modal .modal-c-tabs .nav-tabs, .modal-dialog.modal-notify .modal-header, .navbar, .pagination .active .page-link, .z-depth-1 {
+    box-shadow: 0 0 0 0;
+}
+.hm-red-strong .full-bg-img, .hm-red-strong .mask {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 
 

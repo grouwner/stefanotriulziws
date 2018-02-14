@@ -5,14 +5,15 @@
     {% for post in posts %}
         <div class="col-md-3">
             <a href="{% url 'post_detail' slug=post.slug id=post.id %}">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="{{ post.Gallery_Thumb}}" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">{{ post.titolo_galleria }}</h5>
+                <div class="view overlay hm-red-strong">
+                    <img src="{{ post.Gallery_Thumb}}" class="img-fluid " alt="">
+                    <div class="mask flex-center">
+                        <p class="white-text">{{ post.titolo_galleria }}</p>
                     </div>
                 </div>
             </a>
         </div>
     {% endfor %}
     </div>
+
 {% endblock content %}
