@@ -9,3 +9,6 @@ urlpatterns = [
     url(r'^gallery/(?P<slug>[\w-]+)/(?P<id>[\w-]+)/$', views.post_detail, name='post_detail'),
     url(r'^contact/$', views.contact, name='contact'),
 ]
+
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
