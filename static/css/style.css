@@ -126,7 +126,18 @@ label{
     box-shadow: 0 0 0 0;
 }
 .hm-red-strong .full-bg-img, .hm-red-strong .mask {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.overlay .mask {
+    opacity: 0;
+    -webkit-transition: all .0s ease-in-out;
+    transition: all .0s ease-in-out;
+}
+.btn-2, .white-text {
+    color: #FFF!important;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
@@ -137,7 +148,7 @@ label{
         padding-bottom: 60px;
     }
     .canvas{
-        padding: 0px;
+        padding: 20px;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .5rem;
