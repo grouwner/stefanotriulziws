@@ -13,7 +13,8 @@ def post_list(request):
 
 def post_detail(request, slug, id):
     post = get_object_or_404(Gallery, slug=slug, id=id)
-    return render(request, 'post_detail.html', {'post': post})
+    photo = get_object_or_404(Photo)
+    return render(request, 'post_detail.html', {'post': post, 'photo': photo})
 
 def about(request):
     return render(request, 'about.html', {})
