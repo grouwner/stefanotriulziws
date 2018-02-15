@@ -27,7 +27,7 @@ class Gallery(models.Model):
 class Photo(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     titolo_photo = models.CharField(max_length=250)
-    Upload_photo = models.ImageField(max_length=255, upload_to='../static/', default='')
+    Upload_photo = models.ImageField(max_length=255, upload_to='static/', default='')
     gallery = models.ManyToManyField(Gallery, blank=True)
     created_date = models.DateTimeField(
             default=timezone.now)

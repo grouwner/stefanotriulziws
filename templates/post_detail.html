@@ -4,5 +4,9 @@
     <div class="post">
         <h1>{{ post.titolo_galleria }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+        {% for photo in photo %}
+            <h1>{{ photo.titolo_photo }}</h1>
+        {% endfor %}
     </div>
 {% endblock %}

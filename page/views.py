@@ -13,7 +13,7 @@ def post_list(request):
 
 def post_detail(request, slug, id):
     post = get_object_or_404(Gallery, slug=slug, id=id)
-    photo = get_object_or_404(Photo)
+    photo = Photo.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'post_detail.html', {'post': post, 'photo': photo})
 
 def about(request):
