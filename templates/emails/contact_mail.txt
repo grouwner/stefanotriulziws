@@ -1,0 +1,2 @@
+Il {{ message_date }} alle {{ message_time }} l’utente {{ name }} {{ email }} ci ha scritto: /n
+{{ text }}

@@ -1,4 +1,9 @@
-from django.shortcuts import render
+from email.message import EmailMessage
+
+from django.conf import settings
+from django.http import BadHeaderError, HttpResponse, HttpResponseServerError
+from django.shortcuts import render, redirect
+from django.template import Context, loader
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 # Create your views here.
@@ -21,6 +26,26 @@ def about(request):
     return render(request, 'about.html', {})
 
 def contact(request):
-    form_class = ContactForm
-    return render(request, 'contact.html', {'form': form_class, })
+    context = {}
+
+    form = ContactForm()
+
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.send_contact_mail(request)
+            context["message_sended"] = True
+
+            return render(request, "success.html", context)
+
+        else:
+            return render(request, "fail.html", context)
+
+    context["form"] = form
+
+    return render(request, "contact.html", context)
+
+
+def success(request):
+    return render(request, 'success.html', {})
 
