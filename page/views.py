@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
+
 from gallery.models import Gallery, Photo
 from page.forms import ContactForm
 
@@ -13,7 +14,7 @@ def post_list(request):
 
 def post_detail(request, slug, id):
     post = get_object_or_404(Gallery, slug=slug, id=id)
-    photo = Photo.objects.filter(gallery=request.user, published_date__lte=timezone.now()).order_by('published_date')
+    photo = Photo.objects.filter(author=request.user, published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'post_detail.html', {'post': post, 'photo': photo})
 
 def about(request):

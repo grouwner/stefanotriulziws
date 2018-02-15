@@ -1,13 +1,8 @@
 {% extends 'base_gallery.html' %}
 
 {% block content %}
-    <div class="post">
-        <h1>{{ post.titolo_galleria }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <hr>
-        {% for photo in photo %}
-            <h1>{{ photo.titolo_photo }}</h1>
-            <img src="/{{ photo.Upload_photo}}" class="img-fluid " alt="">
-        {% endfor %}
-    </div>
+    {% for photo in photo %}
+        <h1>{{ photo.titolo_photo }}</h1>
+        <!--<img src="/{{ photo.Upload_photo}}" class="img-fluid " alt="">-->
+    {% endfor %}
 {% endblock %}
