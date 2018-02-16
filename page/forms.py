@@ -24,7 +24,6 @@ class ContactForm(forms.Form):
     text = forms.CharField(
         widget=forms.Textarea(attrs={"class": "form-control mb15", "rows": "4"})
     )
-    captcha = ReCaptchaField(attrs={'theme': 'clean', })
 
     def send_contact_mail(self, request):
         cd = self.cleaned_data
