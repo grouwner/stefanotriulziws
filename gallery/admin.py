@@ -16,7 +16,7 @@ class MyModelAdmin(SortableAdminMixin, admin.ModelAdmin):
 
 
 class ProjectPhoto(admin.ModelAdmin):
-    list_display = ('titolo_photo', 'id', 'Upload_photo', 'created_date', 'published_date', 'author')
+    list_display = ('titolo_photo', 'id', 'gallery', 'Upload_photo', 'created_date', 'published_date', 'author')
     search_fields = ('titolo_photo', 'id',)
     list_filter = ('published_date', 'author')
 
