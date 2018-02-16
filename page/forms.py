@@ -9,18 +9,18 @@ from django.forms import ValidationError
 class ContactForm(forms.Form):
     name = forms.CharField(
         max_length=255,
-        widget=forms.TextInput(attrs={"class": "form-control"})
+        widget=forms.TextInput(attrs={"class": "form-control mb15"})
     )
     email = forms.EmailField(
         max_length=255,
-        widget=forms.TextInput(attrs={"class": "form-control"})
+        widget=forms.TextInput(attrs={"class": "form-control mb15"})
     )
     mail_object = forms.CharField(
         max_length=255,
-        widget=forms.TextInput(attrs={"class": "form-control"})
+        widget=forms.TextInput(attrs={"class": "form-control mb15"})
     )
     text = forms.CharField(
-        widget=forms.Textarea(attrs={"class": "form-control"})
+        widget=forms.Textarea(attrs={"class": "form-control mb15", "rows": "4"})
     )
 
     def send_contact_mail(self, request):

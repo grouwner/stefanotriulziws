@@ -8,7 +8,7 @@
 <form id="contact_us_form" action="./" class="contact_us_form form_type_1 clearfix" method="POST">
   {% csrf_token %}
   <div class="contact_us_form_left">
-      <label>First and Last Name</label>
+      <label>Name</label>
     {{ form.name }}
       <label>Email Address</label>
     {{ form.email }}
@@ -19,7 +19,7 @@
       <label>Message</label>
     {{ form.text }}
   </div>
-  <input class="button green submit_button" type="submit" value="Invia">
+  <input class="btn btn-primary" type="submit" value="Submit">
 </form>
 
 {% endif %}
