@@ -22,4 +22,4 @@ class ProjectPhoto(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Gallery, MyModelAdmin)
-admin.site.register(Photo, ProjectPhoto)
+admin.site.register(Photo)
