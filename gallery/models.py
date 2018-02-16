@@ -1,5 +1,6 @@
 
 from django.db import models
+from django.db.models import permalink
 from django.utils import timezone
 
 
@@ -10,7 +11,7 @@ class Gallery(models.Model):
     Gallery_Thumb = models.ImageField(max_length=255, upload_to='../static/', default='')
     # photo = models.ManyToManyField(Photo, blank=True)
     my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
-    created_date = models.DateTimeField(
+    created_date_gallery = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
@@ -29,7 +30,7 @@ class Photo(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     titolo_photo = models.CharField(max_length=250)
     Upload_photo = models.ImageField(max_length=255, upload_to='../static/', default='')
-    #gallery = models.ManyToManyField(Gallery, blank=True)
+    #allery = models.ManyToManyField(Gallery, blank=True)
     #gallery = models.CharField(max_length=200, choices=CATEGORY, default='residenziale')
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE)
     created_date = models.DateTimeField(
