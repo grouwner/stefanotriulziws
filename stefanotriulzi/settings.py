@@ -133,9 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
 
 EMAIL_SENDER_ADDRESS = None
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = "smtp-relay.gmail.com"
-EMAIL_HOST_USER = 'info@scasolari.com'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "info@scasolari.com"
 EMAIL_HOST_PASSWORD = 'Terabithia_2017$'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
