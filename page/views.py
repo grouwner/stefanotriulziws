@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from gallery.models import Gallery, Photo
 from page.forms import ContactForm
+from django.core.mail import send_mail
 
 
 def post_list(request):
@@ -36,16 +37,9 @@ def contact(request):
             form.send_contact_mail(request)
             context["message_sended"] = True
 
-            return render(request, "success.html", context)
-
-        else:
-            return render(request, "fail.html", context)
-
     context["form"] = form
 
     return render(request, "contact.html", context)
 
 
-def success(request):
-    return render(request, 'success.html', {})
 

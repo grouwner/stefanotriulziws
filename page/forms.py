@@ -3,6 +3,7 @@ from django import forms
 
 # our new form
 from page.notify import Notify
+from django.forms import ValidationError
 
 
 class ContactForm(forms.Form):
@@ -29,7 +30,7 @@ class ContactForm(forms.Form):
             template="emails/contact_mail",
             subject=cd.get("mail_object"),
             sender=cd.get("email"),
-            receiver="sergio.casolari@scasolari.com",
+            receiver="info@scasolari.com",
             request_context=request,
             data={
                 'text': cd.get("text"),

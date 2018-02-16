@@ -1,5 +1,26 @@
-<form role="form" action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+{% load i18n %}
+
+{% if message_sended %}
+  <p class="contact_message_sent">{% trans "IL TUO MESSAGGIO È STATO INVIATO CORRETTAMENTE" %}</p>
+{% else %}
+
+<h1 class="heading_5 uppercase">{% trans 'Contattaci' %}</h1>
+
+
+<form id="contact_us_form" action="./" class="contact_us_form form_type_1 clearfix" method="POST">
+  {% csrf_token %}
+  <div class="contact_us_form_left">
+    {{ form.name }}
+    {{ form.email }}
+    {{ form.mail_object }}
+  </div>
+  <div class="contact_us_form_right">
+    {{ form.text }}
+  </div>
+  <br class="clear">
+  <p class="contact_us_privacy_link">{% trans "Leggi l'" %}<a href="" target="_blank">{% trans 'Informativa' %}</a></p>
+  <br class="clear">
+  <input class="button green submit_button" type="submit" value="Invia">
+</form>
+
+{% endif %}

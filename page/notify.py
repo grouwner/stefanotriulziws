@@ -82,4 +82,4 @@ class Notify():
                 msg.attach_alternative(self.html, "text/html")
             return msg.send()
         except Exception as e:
-            print = "ECCEZIONE ", e
+            print = "ECCEZIONE "
