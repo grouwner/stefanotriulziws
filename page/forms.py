@@ -1,6 +1,5 @@
 import time
 
-from captcha.fields import ReCaptchaField
 from django import forms
 
 # our new form

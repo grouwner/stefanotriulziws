@@ -132,9 +132,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
 
-RECAPTCHA_PUBLIC_KEY = '6LdkwUYUAAAAAHljguigYZhSjWJgctXwFlD6e8UP'
-RECAPTCHA_PRIVATE_KEY = '6LdkwUYUAAAAAI6IuPSGxzx0nAsAExDFWuxMevnF'
-
 EMAIL_SENDER_ADDRESS = None
 
 EMAIL_HOST = "smtp.gmail.com"

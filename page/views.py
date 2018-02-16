@@ -1,10 +1,5 @@
 from email.message import EmailMessage
 
-import urllib
-from urllib.request import urlopen, Request
-from urllib.parse import urlencode
-import json
-
 from django.conf import settings
 from django.http import BadHeaderError, HttpResponse, HttpResponseServerError
 from django.shortcuts import render, redirect
@@ -40,16 +35,6 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            ''' Begin reCAPTCHA validation '''
-            recaptcha_response = request.POST.get('g-recaptcha-response')
-            url = 'https://www.google.com/recaptcha/api/siteverify'
-            values = {'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY, 'response': recaptcha_response}
-            data = urllib.urlencode(values)
-            req = Request(url, data)
-            response = urlopen(req)
-            result = json.load(response)
-            ''' End reCAPTCHA validation '''
-
             form.send_contact_mail(request)
             context["message_sended"] = True
 
