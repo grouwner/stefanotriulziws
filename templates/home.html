@@ -6,7 +6,7 @@
         <div class="col-md-3">
             <a href="{% url 'post_detail' slug=post.slug id=post.id %}">
                 <div class="view overlay hm-red-strong">
-                    <img src="{{ post.Gallery_Thumb}}" class="img-fluid " alt="">
+                    <img src="static/{{ post.Gallery_Thumb}}" class="img-fluid " alt="">
                     <div class="mask flex-center">
                         <p class="white-text">{{ post.titolo_galleria }}</p>
                     </div>
