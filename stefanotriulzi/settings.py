@@ -136,6 +136,6 @@ EMAIL_SENDER_ADDRESS = None
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "info@scasolari.com"
-EMAIL_HOST_PASSWORD = 'Terabithia_2017$'
+EMAIL_HOST_PASSWORD = 'qqq'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

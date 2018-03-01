@@ -8,7 +8,7 @@ class Gallery(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     titolo_galleria = models.CharField(max_length=250)
     slug = models.SlugField(max_length=200, default='', )
-    Gallery_Thumb = models.ImageField(max_length=255, upload_to='../static/', default='')
+    Gallery_Thumb = models.ImageField(max_length=255, upload_to='/static/', default='')
     # photo = models.ManyToManyField(Photo, blank=True)
     my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
     created_date_gallery = models.DateTimeField(
